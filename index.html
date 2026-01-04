@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的图片跳转网页</title>
+    <style>
+        /* 页面基础样式，让图片水平垂直居中 */
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center; /* 水平居中 */
+            align-items: center;    /* 垂直居中 */
+            min-height: 100vh;      /* 铺满整个屏幕高度 */
+            background-color: #ffffff; /* 背景颜色，可修改 */
+        }
+
+        /* 图片样式 */
+        .clickable-image {
+            max-width: 100%;         /* 图片宽度最大为屏幕的100% */
+            height: auto;           /* 高度自动缩放 */
+            cursor: pointer;        /* 鼠标移上去变成“小手”形状 */
+            transition: transform 0.3s; /* 增加一个缩放动画效果 */
+        }
+
+        .clickable-image:hover {
+            transform: scale(1.02); /* 鼠标悬停时图片轻微放大 */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 1. 修改 href 后面的网址（一定要带 https://） -->
+    <a href="https://my.chsi.com.cn/archive/gdjy/xj/show.action" target="_blank">
+        
+        <!-- 2. 修改 src 后面的图片名称（确保图片和这个 HTML 文件放在同一个文件夹里） -->
+        <img src="file.jpg" alt="点击访问网站" class="clickable-image">
+        
+    </a>
+
+</body>
+</html>
